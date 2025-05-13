@@ -38,6 +38,20 @@ Generate Infrastructure as Code using the specified tool for the following cloud
 
 Present the output as a code block formatted for the specified IaC tool.
 
-Tool: [Specify IaC Tool, e.g., Terraform, CloudFormation, Ansible]
+Tool: [Specify IaC Tool, e.g., Terraform, CloudFormation, Ansible, Pulumi, ARM Templates]
 Resources and Configuration:
-[PASTE RESOURCE DESCRIPTION AND CONFIGURATION HERE]
+[DESCRIBE THE CLOUD RESOURCES AND THEIR DESIRED CONFIGURATION HERE, e.g.,
+- AWS EC2 instance: t3.medium, Ubuntu 20.04 AMI, in us-west-2, associated with 'web-sg' security group, using 'prod-key' key pair.
+- Azure SQL Database: Standard tier, 100 DTUs, 250GB storage, in East US region, with firewall rule allowing IP range 203.0.113.0/24.
+- Google Cloud Storage bucket: Regional, Standard storage class, in europe-west3, with versioning enabled.
+]
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the IaC generation, e.g.,
+- Specific naming conventions to follow
+- Requirements for tagging resources
+- Dependencies between resources
+- Existing infrastructure components
+- Compliance requirements
+- Cost considerations
+]

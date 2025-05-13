@@ -17,7 +17,7 @@ function add(a, b) {
   return a + b;
 }
 
-// Language: JavaScript
+# Language: JavaScript
 ```
 
 **Expected Output:**
@@ -45,7 +45,16 @@ Generate comprehensive documentation for the following code snippet or module.
 
 Include a description of its purpose, detailed explanations of any functions, classes, or methods (including parameters and return values), and provide examples of how to use it.
 
-[Optional: Specify the programming language if not obvious from the code.]
+Please present the documentation in [Specify Output Format, e.g., Markdown, JSDoc comments, Python docstrings, code comments].
 
 Code:
 [PASTE CODE SNIPPET HERE]
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the documentation generation, e.g.,
+- Programming language (if not obvious)
+- Specific parts of the code to focus on
+- Target audience for the documentation
+- Desired level of detail
+- Any existing documentation to reference
+]

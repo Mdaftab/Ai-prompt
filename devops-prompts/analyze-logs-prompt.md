@@ -33,9 +33,20 @@ Log Content:
 ## Ready-to-Use Prompt
 
 ```
-Analyze the following log file content. Identify any errors, warnings, or anomalies. Provide a summary of your findings, including potential root causes and suggested next steps for investigation.
+Analyze the following log file content to identify potential errors, warnings, or anomalies.
 
-Present the summary as a bulleted list, with each bullet point detailing an identified issue (error, warning, or anomaly), its potential cause, and a suggested next step.
+Provide a summary of the key findings, including potential root causes and suggested next steps for investigation.
+
+Please present the summary in [Specify Output Format, e.g., bulleted list, JSON, Markdown table].
 
 Log Content:
 [PASTE LOG CONTENT HERE]
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the log analysis, e.g.,
+- Log format (e.g., Syslog, JSON, Apache access logs)
+- System or application generating the logs
+- Specific types of anomalies to look for (e.g., security events, performance issues)
+- Timeframe of interest
+- Known recent changes or deployments
+]

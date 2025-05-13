@@ -28,9 +28,22 @@ Generate network configuration using [Tool/Technology] for the following purpose
 ## Ready-to-Use Prompt
 
 ```
-Generate a network configuration snippet using [Specify Tool/Technology, e.g., iptables, AWS Security Groups, Cisco IOS] for the following purpose:
+Generate a network configuration snippet using [Specify Tool/Technology, e.g., iptables, AWS Security Groups, Cisco IOS, FirewallD] for the following purpose:
 
 Present the output as a code block formatted for the specified tool or technology.
 
 Purpose:
-[PASTE DESCRIPTION OF DESIRED CONFIGURATION HERE]
+[DESCRIBE THE DESIRED NETWORK CONFIGURATION HERE, e.g.,
+- Allow incoming HTTPS traffic on port 443 to web servers in the 'web-tier' security group.
+- Configure a site-to-site VPN tunnel between my on-premises network (192.168.1.0/24) and a VPC subnet (10.0.1.0/24).
+- Block all traffic from IP address 1.2.3.4.
+]
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the network configuration, e.g.,
+- Network topology
+- Existing network configuration rules
+- Security requirements
+- Specific ports and protocols
+- IP addresses or ranges involved
+]

@@ -38,7 +38,17 @@ Optimize the following SQL query for performance.
 
 Analyze the query for potential bottlenecks and suggest specific optimizations, including recommendations for indexing and alternative query structures. Explain the reasoning behind your suggestions.
 
-[Optional: Provide the database schema or relevant table structures for better context.]
+Please present the optimizations in [Specify Output Format, e.g., optimized SQL query, bullet points, detailed explanation].
 
 SQL Query:
 [PASTE SQL QUERY HERE]
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the query optimization, e.g.,
+- Database system (e.g., PostgreSQL, MySQL, SQL Server)
+- Relevant table schemas and indexes
+- Expected data volume in the tables
+- Frequency of this query's execution
+- Specific performance goals
+- Output of EXPLAIN or EXPLAIN PLAN for the query
+]

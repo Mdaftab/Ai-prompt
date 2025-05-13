@@ -35,6 +35,15 @@ Compare the following cloud services from different providers based on the speci
 
 Present the comparison in a clear format, such as a table, highlighting the key differences and similarities.
 
-Service Type: [Specify Service Type, e.g., Compute Instances, Object Storage, Relational Databases]
-Criteria: [Specify Criteria for Comparison, e.g., Pricing, Performance, Scalability, Features]
-Providers: [List Cloud Providers/Services to Compare, e.g., AWS EC2, Azure VMs, Google Compute Engine]
+Service Type: [Specify Service Type, e.g., Compute Instances, Object Storage, Relational Databases, Serverless Functions]
+Criteria: [Specify Criteria for Comparison, e.g., Pricing, Performance, Scalability, Features, Ease of Use, Support, Region Availability]
+Providers: [List Cloud Providers/Services to Compare, e.g., AWS EC2, Azure VMs, Google Compute Engine; AWS S3, Azure Blob Storage, Google Cloud Storage; AWS Lambda, Azure Functions, Google Cloud Functions]
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the comparison, e.g.,
+- Specific workload requirements
+- Existing cloud infrastructure
+- Budget constraints
+- Preference for a particular cloud provider
+- Need for specific features not listed in criteria
+]

@@ -36,9 +36,20 @@ Code:
 ## Ready-to-Use Prompt
 
 ```
-Explain the following code snippet in detail. Describe its overall purpose, break down how it works step-by-step, and identify any key programming concepts, patterns, or algorithms used.
+Explain the following code snippet in detail.
 
-[Optional: Specify the programming language if not obvious from the code.]
+Describe its overall purpose, break down how it works step-by-step, and identify any key programming concepts, patterns, or algorithms used.
+
+Please present the explanation in [Specify Output Format, e.g., paragraph, bullet points, step-by-step guide].
 
 Code:
 [PASTE CODE SNIPPET HERE]
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the code explanation, e.g.,
+- Programming language (if not obvious)
+- Framework or library being used
+- Part of a larger system (describe the system's purpose)
+- Specific aspects you want the explanation to focus on
+- Target audience for the explanation (e.g., junior developer, technical manager)
+]

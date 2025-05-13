@@ -33,5 +33,16 @@ Analyze the following network connectivity issue. Identify the most likely cause
 
 Include relevant commands or actions to diagnose the issue based on the systems and symptoms described.
 
+Please present the troubleshooting steps in [Specify Output Format, e.g., step-by-step guide, bullet points, flowchart (Mermaid)].
+
 Issue Description:
 [PASTE ISSUE DESCRIPTION HERE]
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the troubleshooting, e.g.,
+- Operating systems of the involved systems
+- Network topology (if known)
+- Recent network changes
+- Specific error messages received
+- Tools available for troubleshooting (e.g., ping, traceroute, netstat)
+]

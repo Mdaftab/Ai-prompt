@@ -42,5 +42,16 @@ Analyze the following CI/CD pipeline description. Identify potential bottlenecks
 
 Consider the tools and steps involved, and propose alternative approaches or configurations where applicable.
 
+Please present the optimizations in [Specify Output Format, e.g., bulleted list, step-by-step recommendations, Markdown table comparing options].
+
 Pipeline Description:
 [PASTE PIPELINE DESCRIPTION HERE]
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the CI/CD optimization, e.g.,
+- Specific goals (e.g., reduce build time by 50%, lower cloud costs)
+- Constraints (e.g., must use existing Jenkins infrastructure, cannot introduce new cloud providers)
+- Type of application being built and deployed
+- Current infrastructure setup
+- Monitoring data related to pipeline performance
+]

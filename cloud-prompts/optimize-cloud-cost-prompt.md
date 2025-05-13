@@ -38,5 +38,16 @@ Analyze the following description of cloud resource usage and suggest specific s
 
 Identify areas of potential savings, recommend alternative configurations or services, and propose automation techniques to reduce cloud spend.
 
+Please present the cost optimization strategies in [Specify Output Format, e.g., bulleted list, detailed recommendations, table comparing options].
+
 Resource Usage Description:
 [PASTE RESOURCE USAGE DESCRIPTION HERE]
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the cost optimization, e.g.,
+- Specific cloud provider (e.g., AWS, Azure, GCP)
+- Budget goals
+- Performance requirements
+- Usage patterns (e.g., peak hours, idle times)
+- Any existing cost reports or monitoring data
+]

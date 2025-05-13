@@ -21,3 +21,20 @@ An explanation or comparison of the specified database types, including:
 
 ```
 Explain the differences between the following database types: [Database Types].
+```
+
+## Ready-to-Use Prompt
+
+```
+Explain the differences between the following database types: [Specify Database Types to Explain or Compare, e.g., SQL vs NoSQL, Relational vs Document, Graph vs Key-Value].
+
+For each database type, include its key characteristics, typical use cases, advantages, and disadvantages.
+
+Please present the explanation or comparison in [Specify Output Format, e.g., paragraph, bullet points, comparison table].
+
+Additional Context:
+[OPTIONAL: Provide additional context relevant to the explanation, e.g.,
+- Target audience for the explanation
+- Focus on specific aspects of the database types
+- Scenario where you are considering using a particular type
+]
