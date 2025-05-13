@@ -23,3 +23,14 @@ The generated network configuration snippet.
 Generate network configuration using [Tool/Technology] for the following purpose:
 
 [Description of desired configuration]
+```
+
+## Ready-to-Use Prompt
+
+```
+Generate a network configuration snippet using [Specify Tool/Technology, e.g., iptables, AWS Security Groups, Cisco IOS] for the following purpose:
+
+Present the output as a code block formatted for the specified tool or technology.
+
+Purpose:
+[PASTE DESCRIPTION OF DESIRED CONFIGURATION HERE]

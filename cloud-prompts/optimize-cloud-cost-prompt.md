@@ -29,3 +29,14 @@ Suggestions for cost optimization, including:
 Analyze the following cloud resource usage and suggest strategies for cost optimization.
 
 Resource Usage Description:
+```
+
+## Ready-to-Use Prompt
+
+```
+Analyze the following description of cloud resource usage and suggest specific strategies for cost optimization.
+
+Identify areas of potential savings, recommend alternative configurations or services, and propose automation techniques to reduce cloud spend.
+
+Resource Usage Description:
+[PASTE RESOURCE USAGE DESCRIPTION HERE]

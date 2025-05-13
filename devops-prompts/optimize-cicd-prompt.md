@@ -33,3 +33,14 @@ Suggestions for optimizing the pipeline, including:
 Analyze the following CI/CD pipeline description and suggest optimizations for speed, cost, or reliability.
 
 Pipeline Description:
+```
+
+## Ready-to-Use Prompt
+
+```
+Analyze the following CI/CD pipeline description. Identify potential bottlenecks and suggest specific optimizations to improve speed, reduce cost, and enhance reliability.
+
+Consider the tools and steps involved, and propose alternative approaches or configurations where applicable.
+
+Pipeline Description:
+[PASTE PIPELINE DESCRIPTION HERE]

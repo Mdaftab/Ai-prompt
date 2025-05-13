@@ -28,3 +28,14 @@ A summary of the analysis, including:
 Analyze the following log file content. Identify any errors, warnings, or anomalies. Provide a summary of your findings, including potential root causes and suggested next steps for investigation.
 
 Log Content:
+```
+
+## Ready-to-Use Prompt
+
+```
+Analyze the following log file content. Identify any errors, warnings, or anomalies. Provide a summary of your findings, including potential root causes and suggested next steps for investigation.
+
+Present the summary as a bulleted list, with each bullet point detailing an identified issue (error, warning, or anomaly), its potential cause, and a suggested next step.
+
+Log Content:
+[PASTE LOG CONTENT HERE]

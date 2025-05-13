@@ -36,3 +36,16 @@ Generate documentation for the following code. Describe its purpose, functions, 
 [Optional: Language: Specify the programming language]
 
 Code:
+```
+
+## Ready-to-Use Prompt
+
+```
+Generate comprehensive documentation for the following code snippet or module.
+
+Include a description of its purpose, detailed explanations of any functions, classes, or methods (including parameters and return values), and provide examples of how to use it.
+
+[Optional: Specify the programming language if not obvious from the code.]
+
+Code:
+[PASTE CODE SNIPPET HERE]

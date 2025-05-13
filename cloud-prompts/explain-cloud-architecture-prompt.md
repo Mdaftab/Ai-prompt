@@ -22,3 +22,11 @@ A clear explanation of the pattern, including:
 
 ```
 Explain the cloud architecture pattern: [Architecture Pattern].
+```
+
+## Ready-to-Use Prompt
+
+```
+Explain the cloud architecture pattern "[Specify Architecture Pattern, e.g., Microservices, Serverless, Event-Driven Architecture]" in detail.
+
+Include a clear definition, describe the key components and services typically involved, discuss the advantages and disadvantages, and provide examples of suitable use cases.

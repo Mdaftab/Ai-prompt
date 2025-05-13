@@ -31,3 +31,14 @@ Explain the following code snippet. Describe its purpose, how it works, and any 
 [Optional: Language: Specify the programming language]
 
 Code:
+```
+
+## Ready-to-Use Prompt
+
+```
+Explain the following code snippet in detail. Describe its overall purpose, break down how it works step-by-step, and identify any key programming concepts, patterns, or algorithms used.
+
+[Optional: Specify the programming language if not obvious from the code.]
+
+Code:
+[PASTE CODE SNIPPET HERE]

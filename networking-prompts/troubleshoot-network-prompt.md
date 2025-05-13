@@ -24,3 +24,14 @@ Potential causes and troubleshooting steps, including:
 Analyze the following network connectivity issue and suggest potential causes and troubleshooting steps.
 
 Issue Description:
+```
+
+## Ready-to-Use Prompt
+
+```
+Analyze the following network connectivity issue. Identify the most likely causes and provide a step-by-step guide for troubleshooting the problem.
+
+Include relevant commands or actions to diagnose the issue based on the systems and symptoms described.
+
+Issue Description:
+[PASTE ISSUE DESCRIPTION HERE]

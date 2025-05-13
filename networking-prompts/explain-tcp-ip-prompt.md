@@ -22,3 +22,11 @@ A clear explanation of the concept, including:
 
 ```
 Explain the networking concept: [Networking Concept].
+```
+
+## Ready-to-Use Prompt
+
+```
+Explain the networking concept "[Specify Networking Concept, e.g., TCP/IP Model, DNS, Subnetting]" in detail.
+
+Include a clear definition, explain how it works, describe its key components or layers (if applicable), and highlight its importance in networking.

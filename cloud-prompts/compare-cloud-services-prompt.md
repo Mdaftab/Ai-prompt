@@ -26,3 +26,15 @@ Compare the following cloud services based on the specified criteria:
 Service Type: [Service Type]
 Criteria: [Criteria for comparison]
 Providers: [List of cloud providers/services]
+```
+
+## Ready-to-Use Prompt
+
+```
+Compare the following cloud services from different providers based on the specified criteria.
+
+Present the comparison in a clear format, such as a table, highlighting the key differences and similarities.
+
+Service Type: [Specify Service Type, e.g., Compute Instances, Object Storage, Relational Databases]
+Criteria: [Specify Criteria for Comparison, e.g., Pricing, Performance, Scalability, Features]
+Providers: [List Cloud Providers/Services to Compare, e.g., AWS EC2, Azure VMs, Google Compute Engine]

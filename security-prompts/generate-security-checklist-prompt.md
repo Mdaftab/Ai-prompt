@@ -24,3 +24,11 @@ A checklist of relevant security best practices, which could include:
 
 ```
 Generate a checklist of security best practices for a [Technology/Framework/Application Type].
+```
+
+## Ready-to-Use Prompt
+
+```
+Generate a comprehensive checklist of security best practices specifically tailored for a [Specify Technology, Framework, or Application Type, e.g., Node.js web application, RESTful API, Mobile App].
+
+Organize the checklist by category (e.g., Input Validation, Authentication, Data Protection) and provide brief explanations for each item.

@@ -29,3 +29,15 @@ The generated IaC code snippet for the specified resource(s) and configuration.
 Generate Infrastructure as Code using [IaC Tool] for the following cloud resource(s) and configuration:
 
 [Description of resources and configuration]
+```
+
+## Ready-to-Use Prompt
+
+```
+Generate Infrastructure as Code using the specified tool for the following cloud resources and configurations.
+
+Present the output as a code block formatted for the specified IaC tool.
+
+Tool: [Specify IaC Tool, e.g., Terraform, CloudFormation, Ansible]
+Resources and Configuration:
+[PASTE RESOURCE DESCRIPTION AND CONFIGURATION HERE]

@@ -23,3 +23,11 @@ A clear explanation of the concept, including:
 
 ```
 Explain the security concept: [Security Concept].
+```
+
+## Ready-to-Use Prompt
+
+```
+Explain the security concept "[Specify Security Concept, e.g., Cross-Site Request Forgery (CSRF)]" in detail.
+
+Include a clear definition, explain how it works, describe its potential impact, provide common examples, and outline effective mitigation techniques.

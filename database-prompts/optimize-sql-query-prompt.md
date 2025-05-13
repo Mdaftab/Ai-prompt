@@ -29,3 +29,16 @@ Optimize the following SQL query for performance.
 [Optional: Provide database schema or table structures]
 
 SQL Query:
+```
+
+## Ready-to-Use Prompt
+
+```
+Optimize the following SQL query for performance.
+
+Analyze the query for potential bottlenecks and suggest specific optimizations, including recommendations for indexing and alternative query structures. Explain the reasoning behind your suggestions.
+
+[Optional: Provide the database schema or relevant table structures for better context.]
+
+SQL Query:
+[PASTE SQL QUERY HERE]
