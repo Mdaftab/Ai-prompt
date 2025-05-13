@@ -1,0 +1,61 @@
+Workflow to Generate Project Context Summary File (General Description):
+
+This workflow outlines the steps for an AI to systematically analyze a software project and create a comprehensive summary file to serve as context for future interactions.
+
+Map the Project Structure:
+
+Action: Obtain a complete listing of all directories and files within the project's root directory, including nested folders.
+
+Information Gathered: The full hierarchical structure of the project's file system.
+
+Purpose: To understand the organization and layout of the codebase.
+
+Analyze Project Configuration and Dependencies:
+
+Action: Identify and read the content of key files that define the project's technical stack, dependencies, build process, and configuration settings. Examples include package managers' manifest files (like package.json, pom.xml, requirements.txt), build configuration files (like Webpack or Babel configs), and compiler settings (like tsconfig.json).
+
+Information Gathered: Details about the programming languages, frameworks, libraries, and tools used, as well as how the project is built and configured.
+
+Purpose: To understand the technical environment and external dependencies.
+
+Identify Core Code Components:
+
+Action: Examine the main source code directories to identify the names and types of top-level code definitions, such as classes, functions, modules, interfaces, etc.
+
+Information Gathered: A high-level overview of the major building blocks and logical units within the codebase.
+
+Purpose: To understand the main components and their relationships.
+
+Discover Common Coding Patterns and Conventions:
+
+Action: Scan the source code files to find recurring patterns, idioms, and conventions used throughout the project. This could involve identifying how components are defined, how data is fetched or managed, how errors are handled, or specific architectural patterns.
+
+Information Gathered: Examples and descriptions of the typical way code is written and structured within this specific project.
+
+Purpose: To understand the project's unique coding style and best practices.
+
+Review Content of Representative Files:
+
+Action: Select and read the full content of a few files that are central to the project's functionality or are good examples of the patterns identified in previous steps.
+
+Information Gathered: Detailed code examples and implementation specifics from key areas of the project.
+
+Purpose: To gain a deeper understanding of the code's logic and structure.
+
+Synthesize Information and Create Summary File:
+
+Action: Consolidate all the gathered information (file structure, dependencies, component names, coding patterns, code examples) into a structured summary. Organize this information logically into sections covering the project's overview, technology stack, architecture highlights, coding conventions, and key areas.
+
+Action: Write this synthesized summary content into a new file within the project directory (e.g., named PROJECT_CONTEXT.md).
+
+Information Generated: A markdown file containing a comprehensive overview of the project's context.
+
+Purpose: To create a persistent reference document that encapsulates the project's specifics for future AI interactions and human understanding.
+
+Generate Project Flow Chart:
+
+Action: Create a visual flow chart that maps out the major modules, data flows, and interactions discovered in earlier steps. Tools may include Graphviz, Mermaid, or any diagramming library.
+
+Information Generated: A diagram (e.g., PROJECT_FLOWCHART.png or embedded Mermaid block) illustrating the high‑level workflow and dependencies between components.
+
+Purpose: To provide a clear, visual representation of how information and control move through the system, aiding both understanding and onboarding.
