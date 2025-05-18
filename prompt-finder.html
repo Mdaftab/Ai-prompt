@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Finder</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --tertiary-color: #dbeafe;
+            --light-bg: #f8fafc;
+            --dark-text: #1e293b;
+            --light-text: #f8fafc;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .subheading {
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .search-container {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        #search {
+            width: 100%;
+            max-width: 600px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            color: var(--dark-text);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .tab:hover {
+            background-color: var(--tertiary-color);
+        }
+
+        .tab.active {
+            border-bottom-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .prompt-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .prompt-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .prompt-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .prompt-header {
+            background-color: var(--tertiary-color);
+            padding: 1rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .prompt-title {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+
+        .prompt-category {
+            font-size: 0.875rem;
+            color: var(--secondary-color);
+            margin-top: 0.25rem;
+        }
+
+        .prompt-content {
+            padding: 1rem;
+        }
+
+        .prompt-description {
+            margin-top: 0;
+        }
+
+        .prompt-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .prompt-tag {
+            background-color: var(--tertiary-color);
+            color: var(--primary-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .prompt-link {
+            display: block;
+            text-align: right;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .prompt-link:hover {
+            text-decoration: underline;
+        }
+
+        .decision-tree {
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .decision-tree h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--tertiary-color);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .prompt-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI Prompt Finder</h1>
+        <p class="subheading">Find the perfect prompt for your technical task</p>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for prompts by keyword (e.g., 'cloud', 'security', 'optimization')...">
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" data-category="all">All Categories</div>
+            <div class="tab" data-category="cloud">Cloud Computing</div>
+            <div class="tab" data-category="devops">DevOps</div>
+            <div class="tab" data-category="security">Security</div>
+            <div class="tab" data-category="networking">Networking</div>
+            <div class="tab" data-category="database">Database</div>
+            <div class="tab" data-category="sysadmin">System Admin</div>
+        </div>
+
+        <div class="prompt-grid" id="promptGrid">
+            <!-- Cloud Computing Prompts -->
+            <div class="prompt-card" data-category="cloud" data-tags="aws,azure,gcp,comparison,services,decision,evaluation">
+                <div class="prompt-header">
+                    <h3 class="prompt-title">Compare Cloud Services</h3>
+                    <div class="prompt-category">Cloud Computing</div>
+                </div>
+                <div class="prompt-content">
+                    <p class="prompt-description">Generate comprehensive, evidence-based comparisons between similar services from different cloud providers.</p>
+                    <div class="prompt-tags">
+                        <span class="prompt-tag">AWS</span>
+                        <span class="prompt-tag">Azure</span>
+                        <span class="prompt-tag">GCP</span>
+                        <span class="prompt-tag">Comparison</span>
+                    </div>
+                    <a href="cloud-prompts/compare-cloud-services-prompt.md" class="prompt-link">View Prompt →</a>
+                </div>
+            </div>
+
+            <div class="prompt-card" data-category="cloud" data-tags="cost,optimization,budget,savings,spending,expenses">
+                <div class="prompt-header">
+                    <h3 class="prompt-title">Optimize Cloud Costs</h3>
+                    <div class="prompt-category">Cloud Computing</div>
+                </div>
+                <div class="prompt-content">
+                    <p class="prompt-description">Create detailed plans for reducing cloud spending while maintaining performance and reliability.</p>
+                    <div class="prompt-tags">
+                        <span class="prompt-tag">Cost Optimization</span>
+                        <span class="prompt-tag">Budget</span>
+                        <span class="prompt-tag">Efficiency</span>
+                    </div>
+                    <a href="cloud-prompts/optimize-cloud-cost-prompt.md" class="prompt-link">View Prompt →</a>
+                </div>
+            </div>
+
+            <div class="prompt-card" data-category="cloud" data-tags="architecture,patterns,best practices,design,explanation">
+                <div class="prompt-header">
+                    <h3 class="prompt-title">Explain Cloud Architecture</h3>
+                    <div class="prompt-category">Cloud Computing</div>
+                </div>
+                <div class="prompt-content">
+                    <p class="prompt-description">Get clear, comprehensive explanations of cloud architectural patterns, services, and best practices.</p>
+                    <div class="prompt-tags">
+                        <span class="prompt-tag">Architecture</span>
+                        <span class="prompt-tag">Best Practices</span>
+                        <span class="prompt-tag">Design Patterns</span>
+                    </div>
+                    <a href="cloud-prompts/explain-cloud-architecture-prompt.md" class="prompt-link">View Prompt →</a>
+                </div>
+            </div>
+
+            <!-- DevOps Prompts -->
+            <div class="prompt-card" data-category="devops" data-tags="logs,analysis,troubleshooting,errors,monitoring,diagnostics">
+                <div class="prompt-header">
+                    <h3 class="prompt-title">Analyze Logs</h3>
+                    <div class="prompt-category">DevOps</div>
+                </div>
+                <div class="prompt-content">
+                    <p class="prompt-description">Perform comprehensive log file analysis to identify errors, warnings, anomalies, and patterns.</p>
+                    <div class="prompt-tags">
+                        <span class="prompt-tag">Log Analysis</span>
+                        <span class="prompt-tag">Troubleshooting</span>
+                        <span class="prompt-tag">Monitoring</span>
+                    </div>
+                    <a href="devops-prompts/analyze-logs-prompt.md" class="prompt-link">View Prompt →</a>
+                </div>
+            </div>
+
+            <div class="prompt-card" data-category="devops" data-tags="infrastructure,iac,terraform,cloudformation,automation,provisioning">
+                <div class="prompt-header">
+                    <h3 class="prompt-title">Generate Infrastructure as Code</h3>
+                    <div class="prompt-category">DevOps</div>
+                </div>
+                <div class="prompt-content">
+                    <p class="prompt-description">Create infrastructure as code templates for provisioning and managing cloud resources.</p>
+                    <div class="prompt-tags">
+                        <span class="prompt-tag">IaC</span>
+                        <span class="prompt-tag">Terraform</span>
+                        <span class="prompt-tag">CloudFormation</span>
+                    </div>
+                    <a href="devops-prompts/generate-iac-prompt.md" class="prompt-link">View Prompt →</a>
+                </div>
+            </div>
+
+            <div class="prompt-card" data-category="devops" data-tags="code,explanation,understanding,analysis,review">
+                <div class="prompt-header">
+                    <h3 class="prompt-title">Explain Code</h3>
+                    <div class="prompt-category">DevOps</div>
+                </div>
+                <div class="prompt-content">
+                    <p class="prompt-description">Get detailed explanations of complex code segments, system architectures, or technical implementations.</p>
+                    <div class="prompt-tags">
+                        <span class="prompt-tag">Code Analysis</span>
+                        <span class="prompt-tag">Documentation</span>
+                        <span class="prompt-tag">Knowledge Sharing</span>
+                    </div>
+                    <a href="devops-prompts/explain-code-prompt.md" class="prompt-link">View Prompt →</a>
+                </div>
+            </div>
+
+            <div class="prompt-card" data-category="devops" data-tags="cicd,pipeline,automation,jenkins,github actions,gitlab">
+                <div class="prompt-header">
+                    <h3 class="prompt-title">Optimize CI/CD Pipelines</h3>
+                    <div class="prompt-category">DevOps</div>
+                </div>
+                <div class="prompt-content">
+                    <p class="prompt-description">Improve continuous integration and delivery workflows for better efficiency, reliability, and speed.</p>
+                    <div class="prompt-tags">
+                        <span class="prompt-tag">CI/CD</span>
+                        <span class="prompt-tag">Pipeline</span>
+                        <span class="prompt-tag">Automation</span>
+                    </div>
+                    <a href="devops-prompts/optimize-cicd-prompt.md" class="prompt-link">View Prompt →</a>
+                </div>
+            </div>
+
+            <div class="prompt-card" data-category="devops" data-tags="documentation,docs,readme,technical writing,api docs">
+                <div class="prompt-header">
+                    <h3 class="prompt-title">Generate Documentation</h3>
+                    <div class="prompt-category">DevOps</div>
+                </div>
+                <div class="prompt-content">
+                    <p class="prompt-description">Create comprehensive technical documentation for code, APIs, processes, or systems.</p>
+                    <div class="prompt-tags">
+                        <span class="prompt-tag">Documentation</span>
+                        <span class="prompt-tag">Technical Writing</span>
+                        <span class="prompt-tag">Knowledge Base</span>
+                    </div>
+                    <a href="devops-prompts/generate-docs-prompt.md" class="prompt-link">View Prompt →</a>
+                </div>
+            </div>
+
+            <!-- Continue with similar cards for other categories -->
+            <!-- Security Prompts -->
+            <div class="prompt-card" data-category="security" data-tags="vulnerability,security,penetration testing,code review,analysis">
+                <div class="prompt-header">
+                    <h3 class="prompt-title">Identify Vulnerabilities</h3>
+                    <div class="prompt-category">Security</div>
+                </div>
+                <div class="prompt-content">
+                    <p class="prompt-description">Analyze code or configurations for security issues and potential vulnerabilities.</p>
+                    <div class="prompt-tags">
+                        <span class="prompt-tag">Security Analysis</span>
+                        <span class="prompt-tag">Vulnerabilities</span>
+                        <span class="prompt-tag">Code Review</span>
+                    </div>
+                    <a href="security-prompts/identify-vulnerability-prompt.md" class="prompt-link">View Prompt →</a>
+                </div>
+            </div>
+
+            <!-- Add more security prompts -->
+            <!-- Add Database prompts -->
+            <!-- Add Networking prompts -->
+            <!-- Add SysAdmin prompts -->
+        </div>
+
+        <div class="decision-tree">
+            <h2>Prompt Selection Flowchart</h2>
+            <!-- Embed an SVG flowchart or use a mermaid diagram -->
+            <div style="text-align: center;">
+                <pre style="text-align: left; display: inline-block; background: #f5f5f5; padding: 15px; border-radius: 5px;">
+flowchart TD
+    A[What type of task?] --> B{Infrastructure related?}
+    B -->|Yes| C{What aspect?}
+    B -->|No| D{Development related?}
+    
+    C -->|Design| E[Cloud Architecture Prompt]
+    C -->|Cost| F[Optimize Cloud Cost Prompt]
+    C -->|Comparison| G[Compare Cloud Services Prompt]
+    C -->|Automation| H[Generate IaC Prompt]
+    
+    D -->|Troubleshooting| I{What issue?}
+    D -->|Documentation| J[Generate Documentation Prompt]
+    D -->|Code Understanding| K[Explain Code Prompt]
+    
+    I -->|Logs/Errors| L[Analyze Logs Prompt]
+    I -->|Security| M[Identify Vulnerabilities Prompt]
+    I -->|Network| N[Troubleshoot Network Prompt]
+    I -->|Performance| O{Which component?}
+    
+    O -->|Database| P[Optimize SQL Query Prompt]
+    O -->|Pipeline| Q[Optimize CI/CD Prompt]
+                </pre>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>AI Prompt Collection &copy; 2025 | A comprehensive library of structured prompts for technical tasks</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const search = document.getElementById('search');
+            const tabs = document.querySelectorAll('.tab');
+            const promptCards = document.querySelectorAll('.prompt-card');
+
+            // Handle search
+            search.addEventListener('input', filterPrompts);
+
+            // Handle tab clicks
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    filterPrompts();
+                });
+            });
+
+            function filterPrompts() {
+                const searchTerm = search.value.toLowerCase();
+                const activeCategory = document.querySelector('.tab.active').dataset.category;
+
+                promptCards.forEach(card => {
+                    const category = card.dataset.category;
+                    const tags = card.dataset.tags;
+                    const title = card.querySelector('.prompt-title').textContent.toLowerCase();
+                    const description = card.querySelector('.prompt-description').textContent.toLowerCase();
+
+                    const matchesSearch = !searchTerm || 
+                                         title.includes(searchTerm) || 
+                                         description.includes(searchTerm) || 
+                                         tags.includes(searchTerm);
+                    
+                    const matchesCategory = activeCategory === 'all' || category === activeCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

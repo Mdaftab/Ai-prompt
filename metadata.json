@@ -1,0 +1,236 @@
+{
+  "collection": {
+    "name": "AI Prompt Collection",
+    "version": "1.0.0",
+    "lastUpdated": "2025-05-18",
+    "categories": [
+      "cloud",
+      "devops",
+      "security",
+      "networking",
+      "database",
+      "sysadmin"
+    ]
+  },
+  "prompts": [
+    {
+      "id": "compare-cloud-services",
+      "title": "Compare Cloud Services",
+      "category": "cloud",
+      "path": "cloud-prompts/compare-cloud-services-prompt.md",
+      "description": "Generate comprehensive, evidence-based comparisons between similar services from different cloud providers.",
+      "tags": ["aws", "azure", "gcp", "comparison", "services", "decision", "evaluation"],
+      "complexity": "medium",
+      "lastUpdated": "2025-05-18",
+      "expectedOutputSections": [
+        "Executive Summary",
+        "Comparison Methodology",
+        "Detailed Comparison Table",
+        "Feature-by-Feature Analysis",
+        "Cost Analysis",
+        "Ideal Use Cases",
+        "Migration Considerations",
+        "Final Recommendations",
+        "Sources and References"
+      ],
+      "relatedPrompts": [
+        "optimize-cloud-cost",
+        "explain-cloud-architecture"
+      ]
+    },
+    {
+      "id": "analyze-logs",
+      "title": "Analyze Logs",
+      "category": "devops",
+      "path": "devops-prompts/analyze-logs-prompt.md",
+      "description": "Perform comprehensive log file analysis to identify errors, warnings, anomalies, and patterns.",
+      "tags": ["logs", "analysis", "troubleshooting", "errors", "monitoring", "diagnostics"],
+      "complexity": "high",
+      "lastUpdated": "2025-05-18",
+      "expectedOutputSections": [
+        "Executive Summary",
+        "Log Statistics",
+        "Critical Issues",
+        "Warning Patterns",
+        "Performance Insights",
+        "Security Observations",
+        "Correlated Events",
+        "Actionable Recommendations",
+        "Monitoring Recommendations"
+      ],
+      "relatedPrompts": [
+        "optimize-cicd-prompt",
+        "troubleshoot-system-prompt"
+      ]
+    },
+    {
+      "id": "optimize-cloud-cost",
+      "title": "Optimize Cloud Costs",
+      "category": "cloud",
+      "path": "cloud-prompts/optimize-cloud-cost-prompt.md",
+      "description": "Create detailed plans for reducing cloud spending while maintaining performance and reliability.",
+      "tags": ["cost", "optimization", "budget", "savings", "spending", "expenses"],
+      "complexity": "medium",
+      "lastUpdated": "2025-05-18",
+      "expectedOutputSections": [
+        "Executive Summary",
+        "Current Cost Analysis",
+        "Immediate Savings Opportunities",
+        "Long-term Optimization Strategies",
+        "Implementation Plan",
+        "ROI Projections",
+        "Monitoring and Management Recommendations"
+      ],
+      "relatedPrompts": [
+        "compare-cloud-services",
+        "explain-cloud-architecture"
+      ]
+    },
+    {
+      "id": "explain-cloud-architecture",
+      "title": "Explain Cloud Architecture",
+      "category": "cloud",
+      "path": "cloud-prompts/explain-cloud-architecture-prompt.md",
+      "description": "Get clear, comprehensive explanations of cloud architectural patterns, services, and best practices.",
+      "tags": ["architecture", "patterns", "best practices", "design", "explanation"],
+      "complexity": "medium",
+      "lastUpdated": "2025-05-18",
+      "expectedOutputSections": [
+        "Overview",
+        "Key Components",
+        "Architectural Diagram",
+        "Design Principles",
+        "Implementation Considerations",
+        "Common Variations",
+        "Pros and Cons",
+        "Real-world Examples",
+        "Best Practices"
+      ],
+      "relatedPrompts": [
+        "compare-cloud-services",
+        "optimize-cloud-cost"
+      ]
+    },
+    {
+      "id": "generate-iac",
+      "title": "Generate Infrastructure as Code",
+      "category": "devops",
+      "path": "devops-prompts/generate-iac-prompt.md",
+      "description": "Create infrastructure as code templates for provisioning and managing cloud resources.",
+      "tags": ["infrastructure", "iac", "terraform", "cloudformation", "automation", "provisioning"],
+      "complexity": "high",
+      "lastUpdated": "2025-05-18",
+      "expectedOutputSections": [
+        "Infrastructure Overview",
+        "Resources Specification",
+        "Code Templates",
+        "Variables and Parameters",
+        "Deployment Instructions",
+        "Testing and Validation",
+        "Best Practices",
+        "Security Considerations"
+      ],
+      "relatedPrompts": [
+        "optimize-cicd-prompt",
+        "compare-cloud-services"
+      ]
+    },
+    {
+      "id": "explain-code",
+      "title": "Explain Code",
+      "category": "devops",
+      "path": "devops-prompts/explain-code-prompt.md",
+      "description": "Get detailed explanations of complex code segments, system architectures, or technical implementations.",
+      "tags": ["code", "explanation", "understanding", "analysis", "review"],
+      "complexity": "medium",
+      "lastUpdated": "2025-05-18",
+      "expectedOutputSections": [
+        "High-level Overview",
+        "Detailed Breakdown",
+        "Key Functions and Methods",
+        "Design Patterns Used",
+        "Flow Diagram",
+        "Potential Issues",
+        "Improvement Suggestions",
+        "Related Concepts"
+      ],
+      "relatedPrompts": [
+        "generate-docs-prompt",
+        "identify-vulnerability-prompt"
+      ]
+    },
+    {
+      "id": "optimize-cicd",
+      "title": "Optimize CI/CD Pipelines",
+      "category": "devops",
+      "path": "devops-prompts/optimize-cicd-prompt.md",
+      "description": "Improve continuous integration and delivery workflows for better efficiency, reliability, and speed.",
+      "tags": ["cicd", "pipeline", "automation", "jenkins", "github actions", "gitlab"],
+      "complexity": "high",
+      "lastUpdated": "2025-05-18",
+      "expectedOutputSections": [
+        "Pipeline Assessment",
+        "Performance Bottlenecks",
+        "Reliability Issues",
+        "Optimization Recommendations",
+        "Implementation Steps",
+        "Advanced Patterns",
+        "Monitoring Strategies",
+        "Before/After Comparison"
+      ],
+      "relatedPrompts": [
+        "generate-iac-prompt",
+        "generate-docs-prompt"
+      ]
+    },
+    {
+      "id": "generate-docs",
+      "title": "Generate Documentation",
+      "category": "devops",
+      "path": "devops-prompts/generate-docs-prompt.md",
+      "description": "Create comprehensive technical documentation for code, APIs, processes, or systems.",
+      "tags": ["documentation", "docs", "readme", "technical writing", "api docs"],
+      "complexity": "medium",
+      "lastUpdated": "2025-05-18",
+      "expectedOutputSections": [
+        "Overview",
+        "Getting Started",
+        "Installation",
+        "Usage Examples",
+        "API Reference",
+        "Configuration Options",
+        "Advanced Usage",
+        "Troubleshooting",
+        "Contributing Guidelines"
+      ],
+      "relatedPrompts": [
+        "explain-code-prompt",
+        "generate-iac-prompt"
+      ]
+    },
+    {
+      "id": "identify-vulnerability",
+      "title": "Identify Vulnerabilities",
+      "category": "security",
+      "path": "security-prompts/identify-vulnerability-prompt.md",
+      "description": "Analyze code or configurations for security issues and potential vulnerabilities.",
+      "tags": ["vulnerability", "security", "penetration testing", "code review", "analysis"],
+      "complexity": "high",
+      "lastUpdated": "2025-05-18",
+      "expectedOutputSections": [
+        "Executive Summary",
+        "Vulnerability List",
+        "Risk Assessment",
+        "Technical Details",
+        "Exploitation Scenarios",
+        "Remediation Steps",
+        "Verification Methods",
+        "Security Best Practices"
+      ],
+      "relatedPrompts": [
+        "generate-security-checklist-prompt",
+        "explain-security-concept-prompt"
+      ]
+    }
+  ]
+}
